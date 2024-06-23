@@ -9,6 +9,7 @@ resource "aws_eip" "lb" {
 }
 #for outputing the value we can use this 
 #the identiier of resource block are aws_eip.lb
+#here public_ip is attribute and read doc for more
 output "public-ip" {
   value = aws_eip.lb.public_ip
 }
