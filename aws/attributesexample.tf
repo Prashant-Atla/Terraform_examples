@@ -7,7 +7,8 @@ provider "aws"{
 resource "aws_eip" "lb" {
   domain   = "vpc"
 }
-#for outputing the value we can use this
+#for outputing the value we can use this 
+#the identiier of resource block are aws_eip.lb
 output "public-ip" {
   value = aws_eip.lb.public_ip
 }
