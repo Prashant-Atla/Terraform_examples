@@ -7,6 +7,10 @@ provider "aws"{
 resource "aws_eip" "lb" {
   domain   = "vpc"
 }
+#for outputing the value we can use this
+output "public-ip" {
+  value = aws_eip.lb.public_ip
+}
 
 resource "aws_instance" "web" {
   ami           = "ami-0440d3b780d96b29d"
