@@ -6,5 +6,5 @@ provider "aws" {
 
 resource "aws_instance" "web" {
     ami = "ami-023e152801ee4846a"
-    instance_type = "t3.micro"
+    instance_type = var.instancetype
 }
